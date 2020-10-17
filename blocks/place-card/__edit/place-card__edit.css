@@ -1,0 +1,16 @@
+.place-card__edit {
+    color: #fff;
+
+    border: 1px solid #fff;
+    width: 18px;
+    height: 20px;
+    position: relative;
+    top: 10px;
+    right: -120px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .place-card:hover .place-card__edit {
+    display: block;
+  }

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Телефонная книга</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body>
+    <div class="root">
+      <div class="profile root__section">
+        <div class="user-info">
+          <div class="user-info__data">
+            <h1 class="user-info__name">Ваше Имя</h1>
+            <p class="user-info__job">О Вас</p>
+            <button type class="user-info__editbutton">Редактировать</button>
+          </div>
+          <button class="button user-info__button">+</button>
+        </div>
+      </div>
+      <form name="searchForm">
+        <input
+        type="text"
+        min="2"
+        max="30"
+        required
+        name="searchField"
+        class="search"
+        placeholder="Поиск">
+        <button type id="saveButton" class="button-search">
+          Поиск
+        </button>
+      </form>
+      <div class="places-list root__section"></div>
+      <div id="popup1" class="popup edit-profile">
+        <div class="popup__content">
+          <img src="./images/close.svg" alt="" class="popup__close popup1close" />
+          <h3 class="popup__title">Редактировать профиль</h3>
+          <form class="popup__form" name="edit">
+            <input
+              type="text"
+              min="2"
+              max="30"
+              name="firstname"
+              class="popup__input popup__input_type_firstname"
+              placeholder="Имя"
+              required
+            />
+            <input
+              type="text"
+              min="2"
+              max="30"
+              name="about"
+              class="popup__input popup__input_type_about"
+              placeholder="О себе"
+              required
+            />
+            <button type id="saveButton" class="button popup__edit-profile-button">
+              Сохранить
+            </button>
+          </form>
+        </div>
+      </div>
+      <div id="popup2" class="popup add-card">
+        <div class="popup__content">
+          <img src="./images/close.svg" alt="" class="popup__close popup2close" />
+          <h3 class="popup__title">Новое запись</h3>
+          <form class="popup__form" name="new">
+            <input
+              type="text"
+              min="2"
+              max="30"
+              name="name"
+              class="popup__input popup__input_type_name"
+              placeholder="Имя"
+              required
+            />
+            <input
+              type="tel"
+              min="2"
+              max="30"
+              name="number"
+              class="popup__input popup__input_type_number"
+              placeholder="Телефон"
+              required
+              pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+            />
+            <input
+              type="email"
+              min="2"
+              max="30"
+              name="email"
+              class="popup__input popup__input_type_email"
+              placeholder="E-mail"
+              required
+            />>
+            <button type id="saveButton" class="button popup__button popup__button_disabled">
+              +
+            </button>
+          </form>
+        </div>
+      </div>
+      <div id="popup4" class="popup add-card">
+        <div class="popup__content">
+          <img src="./images/close.svg" alt="" class="popup__close popup2close" />
+          <h3 class="popup__title">Редактирование контракта</h3>
+          <form class="popup__form" name="cardedit">
+            <input
+              type="text"
+              min="2"
+              max="30"
+              name="name"
+              class="popup__input popup__input_type_name"
+              placeholder="Имя"
+              required
+            />
+            <input
+              type="tel"
+              min="2"
+              max="30"
+              name="number"
+              class="popup__input popup__input_type_number"
+              placeholder="Телефон"
+              required
+              pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+            />
+            <input
+              type="email"
+              min="2"
+              max="30"
+              name="email"
+              class="popup__input popup__input_type_email"
+              placeholder="E-mail"
+              required
+            />
+            <button type id="saveButton" class="button popup__button popup__button_disabled">
+              +
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script/Card.js"></script>
+    <script src="script/CardList.js"></script>
+    <script src="script/Popup.js"></script>
+    <script src="script/UserInfo.js"></script>
+    <script src="script/CardArray.js"></script>
+    <script src="script/CardEdit.js"></script>
+    <script src="script/Search.js"></script>
+    <script src="script/script.js"></script>
+  </body>
+</html>
